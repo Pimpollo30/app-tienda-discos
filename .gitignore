@@ -43,3 +43,6 @@ Thumbs.db
 
 src/assets/images
 .firebase/
+
+.firebaserc
+firebase.json
