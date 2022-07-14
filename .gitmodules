@@ -1,3 +1,3 @@
 [submodule "backend"]
 	path = backend
-	url = ./backend
+	url = https://github.com/Pimpollo30/backend-tienda-discos
