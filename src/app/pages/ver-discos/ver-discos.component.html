@@ -1,0 +1,67 @@
+<div class="container">
+    <h3 class="text-center mt-2">Productos</h3>
+    <hr class="mx-auto" style="max-width: 800px;">
+  <div *ngIf="discos.length <= 0">  
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status" style="width:80px;height:80px;">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+    <p class="text-center ms-2 fw-semibold" style="font-size:18px;">Cargando...</p>
+  </div>
+<div *ngIf="discos.length > 0">    
+    <div *ngFor="let disco of discos">
+        <div class="card mb-3 mx-auto border-0" style="max-width: 700px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{disco.url}}" class="img-fluid rounded-start mt-3" alt="{{disco.nombre}}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title text-truncate"><span class="text-primary" style="cursor:pointer;">{{disco.artista}}</span> - {{disco.nombre}}</h5>
+                  <p class="card-text mb-2">Sello: <span class="text-primary" style="cursor:pointer;">{{disco.sello}}</span></p>
+                  <p class="card-text mb-2">Formato: <span class="text-primary" style="cursor:pointer;">{{disco.formato}}</span></p>
+                  <p class="card-text mb-2">País: <span class="text-primary" style="cursor:pointer;">{{disco.pais}}</span></p>
+                  <p class="card-text mb-2">Publicado: <span class="text-primary" style="cursor:pointer;">{{disco.year}}</span></p>
+                  <p class="card-text mb-2">Género: <span class="text-primary" style="cursor:pointer;">{{disco.genero}}</span></p>
+                  <h4 class="card-text">${{disco.precio}}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="mx-auto" style="max-width: 800px;">
+    </div>
+  </div>
+</div>
+
+
+<!-- 
+
+    <div class="container">
+    <h3 class="text-center mt-2">Productos</h3>
+    <div *ngFor="let producto of productos">
+        <hr class="mx-auto dropdown-divider" style="max-width: 700px;">
+        <div class="card mb-3 mx-auto border-0" style="max-width: 600px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{producto.url_img}}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4 class="card-title">{{producto.nombre}}</h4>
+                  <p class="card-text mb-2 lead">{{producto.descripcion}}</p>
+                  <h5 class="card-text mb-2">${{producto.precio}}</h5>
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-start">
+                            <button class="btn mt-2" id="pedido" (click)="verProducto(producto)">Ver producto</button>
+                        </div>
+                        
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <hr class="mx-auto dropdown-divider" style="max-width: 700px;">
+</div>
+ -->
